@@ -16,7 +16,7 @@ jobs:
       - name: Instalar .NET 8
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '8.0.425'
 
       - name: Instalar MAUI Android
         run: dotnet workload install maui-android
@@ -33,3 +33,4 @@ jobs:
           name: HotelBraga-Android
           path: '**/bin/Debug/net8.0-android/**/*.apk'
           if-no-files-found: error
+
