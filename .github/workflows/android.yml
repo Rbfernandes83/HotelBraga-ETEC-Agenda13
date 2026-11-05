@@ -25,7 +25,7 @@ jobs:
         run: dotnet restore HotelBraga.csproj
 
       - name: Compilar APK de teste
-        run: dotnet publish HotelBraga.csproj -f net8.0-android -c Debug -p:AndroidPackageFormat=apk
+        run: dotnet publish HotelBraga.csproj -f net8.0-android -c Debug -p:AndroidPackageFormat=apk -p:EmbedAssembliesIntoApk=true
 
       - name: Disponibilizar APK
         uses: actions/upload-artifact@v4
@@ -33,4 +33,5 @@ jobs:
           name: HotelBraga-Android
           path: '**/bin/Debug/net8.0-android/**/*.apk'
           if-no-files-found: error
+
 
