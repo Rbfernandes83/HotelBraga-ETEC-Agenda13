@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0-android</TargetFramework>
@@ -11,17 +12,23 @@
 
     <ApplicationTitle>Hotel Braga - Reservas</ApplicationTitle>
     <ApplicationId>com.rbfernandes83.hotelbraga</ApplicationId>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
-    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>2.0</ApplicationDisplayVersion>
+    <ApplicationVersion>2</ApplicationVersion>
 
     <SupportedOSPlatformVersion>21.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#142D4E" BaseSize="128,128" />
+    <MauiIcon Include="Resources\AppIcon\appicon.svg"
+              ForegroundFile="Resources\AppIcon\appiconfg.svg"
+              Color="#142D4E" />
+
+    <MauiSplashScreen Include="Resources\Splash\splash.svg"
+                      Color="#142D4E"
+                      BaseSize="128,128" />
+
     <MauiImage Include="Resources\Images\*" />
     <MauiFont Include="Resources\Fonts\*" />
   </ItemGroup>
 
 </Project>
-

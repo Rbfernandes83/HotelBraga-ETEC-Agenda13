@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -9,30 +10,44 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="16">
 
-            <Label Text="HOTEL BRAGA"
-                   FontSize="30"
-                   FontAttributes="Bold"
-                   TextColor="#142D4E"
-                   HorizontalOptions="Center" />
+            <Label
+                Text="HOTEL BRAGA"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="#142D4E"
+                HorizontalOptions="Center" />
 
-            <Label Text="Sua hospedagem com conforto e elegância"
-                   FontSize="14"
-                   TextColor="#666666"
-                   HorizontalOptions="Center" />
+            <Label
+                Text="Sua hospedagem com conforto e elegância"
+                FontSize="14"
+                TextColor="#666666"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
 
-            <Image Source="hotel.jpg"
-                   HeightRequest="190"
-                   Aspect="AspectFill" />
+            <Image
+                Source="hotel.jpg"
+                HeightRequest="190"
+                Aspect="AspectFill" />
 
-            <Label Text="Faça sua reserva"
-                   FontSize="23"
-                   FontAttributes="Bold"
-                   TextColor="#142D4E" />
+            <Button
+                Text="Ver acomodações"
+                BackgroundColor="#D4AF37"
+                TextColor="#142D4E"
+                FontAttributes="Bold"
+                CornerRadius="12"
+                Clicked="AbrirAcomodacoes_Clicked" />
+
+            <Label
+                Text="Faça sua reserva"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="#142D4E" />
 
             <Label Text="Tipo de quarto" />
 
-            <Picker x:Name="TipoQuarto"
-                    Title="Selecione o quarto">
+            <Picker
+                x:Name="TipoQuarto"
+                Title="Selecione o quarto">
                 <Picker.Items>
                     <x:String>Solteiro</x:String>
                     <x:String>Casal</x:String>
@@ -41,42 +56,45 @@
             </Picker>
 
             <Label Text="Data de entrada" />
-            <DatePicker x:Name="DataEntrada"
-                         />
+
+            <DatePicker x:Name="DataEntrada" />
 
             <Label Text="Data de saída" />
-            <DatePicker x:Name="DataSaida"
-                         />
+
+            <DatePicker x:Name="DataSaida" />
 
             <Label Text="Quantidade de hóspedes" />
 
             <HorizontalStackLayout Spacing="15">
-                <Stepper x:Name="QuantidadeHospedes"
-                         Minimum="1"
-                         Maximum="6"
-                         Increment="1"
-                         Value="1"
-                          />
 
-                <Label x:Name="TextoHospedes"
-                       Text="{Binding Source={x:Reference QuantidadeHospedes}, Path=Value, StringFormat='{0:F0} hóspede(s)'}"
-                       VerticalOptions="Center" />
+                <Stepper
+                    x:Name="QuantidadeHospedes"
+                    Minimum="1"
+                    Maximum="6"
+                    Increment="1"
+                    Value="1" />
+
+                <Label
+                    x:Name="TextoHospedes"
+                    Text="{Binding Source={x:Reference QuantidadeHospedes}, Path=Value, StringFormat='{0:F0} hóspede(s)'}"
+                    VerticalOptions="Center" />
+
             </HorizontalStackLayout>
 
-            <Button Text="Consultar reserva"
-                    BackgroundColor="#142D4E"
-                    TextColor="White"
-                    CornerRadius="12"
-                    Clicked="ConsultarReserva_Clicked" />
+            <Button
+                Text="Consultar reserva"
+                BackgroundColor="#142D4E"
+                TextColor="White"
+                CornerRadius="12"
+                Clicked="ConsultarReserva_Clicked" />
 
-            <Button Text="Sobre o aplicativo"
-                    BackgroundColor="#D4AF37"
-                    TextColor="#142D4E"
-                    CornerRadius="12"
-                    Clicked="AbrirSobre_Clicked" />
+            <Button
+                Text="Sobre o aplicativo"
+                BackgroundColor="#D4AF37"
+                TextColor="#142D4E"
+                CornerRadius="12"
+                Clicked="AbrirSobre_Clicked" />
 
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-
-

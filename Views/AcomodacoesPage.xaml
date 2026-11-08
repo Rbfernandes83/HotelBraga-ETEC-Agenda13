@@ -1,0 +1,98 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:HotelBraga.Models"
+    x:Class="HotelBraga.Views.AcomodacoesPage"
+    Title="Acomodações"
+    BackgroundColor="#F5F7FA">
+
+    <Grid RowDefinitions="Auto,*"
+          Padding="20"
+          RowSpacing="15">
+
+        <VerticalStackLayout
+            Grid.Row="0"
+            Spacing="8">
+
+            <Label
+                Text="NOSSAS ACOMODAÇÕES"
+                FontSize="25"
+                FontAttributes="Bold"
+                TextColor="#142D4E"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Escolha o conforto ideal para sua estadia"
+                FontSize="14"
+                TextColor="#666666"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center" />
+
+        </VerticalStackLayout>
+
+        <CollectionView
+            Grid.Row="1"
+            x:Name="ListaQuartos"
+            SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate x:DataType="models:Quarto">
+
+                    <Border
+                        BackgroundColor="White"
+                        Stroke="#D4AF37"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 16"
+                        Margin="0,0,0,16">
+
+                        <VerticalStackLayout Spacing="10">
+
+                            <Image
+                                Source="{Binding Imagem}"
+                                HeightRequest="190"
+                                Aspect="AspectFill" />
+
+                            <VerticalStackLayout
+                                Padding="15"
+                                Spacing="8">
+
+                                <Label
+                                    Text="{Binding Nome}"
+                                    FontSize="22"
+                                    FontAttributes="Bold"
+                                    TextColor="#142D4E" />
+
+                                <Label
+                                    Text="{Binding Descricao}"
+                                    FontSize="14"
+                                    TextColor="#666666" />
+
+                                <Label
+                                    Text="{Binding CapacidadeMaxima, StringFormat='Capacidade: {0} hóspede(s)'}"
+                                    FontSize="13"
+                                    TextColor="#142D4E" />
+
+                                <Label
+                                    Text="{Binding PrecoFormatado, StringFormat='{0} / diária'}"
+                                    FontSize="19"
+                                    FontAttributes="Bold"
+                                    TextColor="#B08D29" />
+
+                            </VerticalStackLayout>
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>
