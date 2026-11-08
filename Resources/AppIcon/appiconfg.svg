@@ -3,7 +3,7 @@
      width="512" height="512"
      viewBox="0 0 512 512">
 
-  <!-- Telhado do hotel -->
+  <!-- Telhado dourado -->
   <path d="M140 205 L256 115 L372 205"
         fill="none"
         stroke="#D4AF37"
@@ -17,17 +17,32 @@
         stroke="#D4AF37"
         stroke-width="10"/>
 
-  <!-- Monograma HB -->
-  <g fill="#F2D477"
-     font-family="Georgia, serif"
-     font-size="116"
-     font-weight="bold"
-     text-anchor="middle">
-    <text x="256" y="335">HB</text>
-  </g>
+  <!-- Letra H vetorial -->
+  <path d="M182 270 V340 M182 305 H226 M226 270 V340"
+        fill="none"
+        stroke="#F2D477"
+        stroke-width="15"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <!-- Letra B vetorial -->
+  <path d="M270 270 V340
+           M270 270 H304
+           Q327 270 327 288
+           Q327 305 304 305
+           H270
+           M270 305 H306
+           Q331 305 331 323
+           Q331 340 306 340
+           H270"
+        fill="none"
+        stroke="#F2D477"
+        stroke-width="13"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
 
   <!-- Linha decorativa -->
-  <path d="M170 355 H342"
+  <path d="M170 365 H342"
         stroke="#D4AF37"
         stroke-width="5"/>
 
