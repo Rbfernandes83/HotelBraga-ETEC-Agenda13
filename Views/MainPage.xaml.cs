@@ -4,7 +4,7 @@ using HotelBraga.Services;
 using HotelBraga.Views;
 using System.Globalization;
 
-namespace HotelBraga;
+namespace HotelBraga.Views;
 
 public partial class MainPage : ContentPage
 {

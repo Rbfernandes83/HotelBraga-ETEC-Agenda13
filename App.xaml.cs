@@ -1,4 +1,6 @@
-﻿namespace HotelBraga;
+﻿using HotelBraga.Views;
+
+namespace HotelBraga;
 
 public partial class App : Application
 {

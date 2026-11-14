@@ -1,4 +1,4 @@
-﻿namespace HotelBraga;
+﻿namespace HotelBraga.Views;
 
 public partial class SobrePage : ContentPage
 {
